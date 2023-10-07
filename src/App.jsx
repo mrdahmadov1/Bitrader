@@ -2,17 +2,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import Register from "./pages/auth/register";
 import Login from "./pages/auth/login";
-import ResetPassword from "./pages/auth/reset-password";
+import ResetPassword from "./pages/auth/resetPassword";
 import Services from "./pages/services";
-import ServiceDetails from "./pages/services/service-details";
+import ServiceDetails from "./pages/services/serviceDetails";
 import About from "./pages/about";
 import Price from "./pages/price";
 import Team from "./pages/team";
-import TeamDetails from "./pages/team/team-details";
+import TeamDetails from "./pages/team/teamDetails";
 import Blogs from "./pages/blogs";
-import BlogDetails from "./pages/blogs/blog-details";
+import BlogDetails from "./pages/blogs/blogdetails";
 import Contact from "./pages/contact";
-import NotFound from "./pages/not-found";
+import NotFound from "./pages/notFound";
 
 function App() {
   return (
