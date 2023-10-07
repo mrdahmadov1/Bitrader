@@ -1,3 +1,3 @@
-# Bitrader using React.js
+# Bitrader
 
-![Bitrader Design Overview]('./assets/images/design-overview.png')
+![Bitrader Design Overview](src/assets/images/design-overview.png)
