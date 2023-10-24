@@ -52,27 +52,33 @@ const pagesData = [
   },
   {
     path: "about",
-    element: <About />,
     title: "About",
-  },
-  {
-    path: "price",
-    element: <Price />,
-    title: "Price",
-  },
-  {
-    path: "team",
-    title: "Teams",
     children: [
       {
         path: "",
-        element: <Team />,
-        title: "All Team",
+        element: <About />,
+        title: "About Us",
       },
       {
-        path: ":id",
-        element: <TeamDetails />,
-        title: "Member",
+        path: "price",
+        element: <Price />,
+        title: "Price",
+      },
+      {
+        path: "team",
+        title: "Teams",
+        children: [
+          {
+            path: "",
+            element: <Team />,
+            title: "All Team",
+          },
+          {
+            path: ":id",
+            element: <TeamDetails />,
+            title: "Member",
+          },
+        ],
       },
     ],
   },

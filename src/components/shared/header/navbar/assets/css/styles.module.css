@@ -1,0 +1,49 @@
+.menuList {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+
+  color: #0C263A;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: capitalize;
+  padding: 15px 22px;
+
+  position: relative;
+}
+
+.menuItem img {
+  margin-top: 2px;
+}
+
+.menuItem:hover .megaMenuList {
+  display: block;
+}
+
+.megaMenuList {
+  display: none;
+  width: 220px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
+  border-radius: 0.4rem;
+  position: absolute;
+  left: 0;
+  top: 55px;
+}
+
+.megaMenuList .megaMenuItem .megaMenuLink {
+  color: #0C263A;
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(#fff, 0.05);
+  border-radius: 0.3rem;
+}
