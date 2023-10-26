@@ -25,12 +25,12 @@
   margin-top: 2px;
 }
 
-.menuItem:hover .megaMenuList {
-  display: block;
+.menuLink {
+  cursor: pointer;
+
 }
 
 .megaMenuList {
-  display: none;
   width: 220px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
@@ -46,4 +46,60 @@
   padding: 10px 20px;
   border-bottom: 1px solid rgba(#fff, 0.05);
   border-radius: 0.3rem;
+}
+
+.btnHamburger {
+  display: none;
+}
+
+.btnHamburger img {
+  cursor: pointer;
+  width: 32px;
+}
+
+@media all and (max-width:992px) {
+  .btnHamburger {
+    display: block;
+    margin-left: 20px;
+    padding: 10px 20px;
+    order: 2;
+  }
+
+  .menuList {
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .menuItem {
+    border-bottom: 1px solid rgb(189, 189, 189, 0.2);
+  }
+
+  .menuLink {
+    width: 100%;
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+
+  .megaMenuList {
+    width: 100%;
+    border-top: 1px solid rgb(189, 189, 189, 0.2);
+    margin-top: 15px;
+    box-shadow: none;
+  }
+
+  .menuItem.megaMenu {
+    padding-bottom: 180px;
+  }
+
+  .megaMenuItem {
+    padding: 10px 30px;
+    font-size: 13px;
+    border-bottom: 1px solid rgb(189, 189, 189, 0.2);
+  }
 }

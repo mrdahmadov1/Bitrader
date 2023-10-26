@@ -11,7 +11,9 @@ export default function Header() {
 
         <Navbar />
 
-        <Link className={styles.linkJoin}>Join Now</Link>
+        <div className={styles.linkJoinContainer}>
+          <Link className={styles.linkJoin}>Join Now</Link>
+        </div>
       </div>
     </header>
   );

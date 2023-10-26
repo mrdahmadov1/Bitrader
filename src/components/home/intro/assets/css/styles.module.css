@@ -1,0 +1,140 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 110px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content {
+  flex-basis: 50%;
+}
+
+.title {
+  color: #0C263A;
+  font-size: 3.75rem;
+  font-weight: 600;
+  line-height: 1;
+  font-family: 'Anek Telugu', sans-serif;
+  margin-bottom: 8px;
+}
+
+.title span {
+  color: #0A4FD5;
+}
+
+.description {
+  color: #6B777F;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.linkGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 88px;
+}
+
+.linkStart,
+.linkWatch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-radius: 8px;
+  color: #0C263A;
+  font-weight: 600;
+}
+
+.linkStart {
+  background: #00D094;
+  padding: 1rem 1.875rem;
+  border: 1px solid #00D094;
+}
+
+.linkStart img {
+  width: 16px;
+}
+
+.linkWatch {
+  color: #0A4FD5;
+  padding: 0.875rem 1.875rem;
+  border: 1px solid #0A4FD5;
+  flex-direction: row-reverse;
+}
+
+.thumb {
+  overflow: hidden;
+}
+
+.thumb img {
+  min-width: 743px;
+  animation: slideHorizontal 3s linear infinite;
+}
+
+.social {
+  color: #0C263A;
+}
+
+.socialTitle {
+  margin-bottom: 25px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.socialLink {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ECEFF2;
+}
+
+
+.socialLink.active,
+.socialLink:hover {
+  background-color: #00D094;
+  border: 1px solid #00D094;
+}
+
+.socialLink.active img {
+  width: 12px;
+}
+
+.socialLink img {
+  width: 16px;
+}
+
+@keyframes slideHorizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
