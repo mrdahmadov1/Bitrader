@@ -1,4 +1,11 @@
-:root {}
+:root {
+  --body-color: #FFFFFF;
+  --text-color: #6B777F;
+  --title-color: #0C263A;
+  --secondary-color: #0A4FD5;
+  --brand-color: #00D094;
+  --social-border-color-2: #ECEFF2;
+}
 
 @media all and (max-width:1600px) {}
 

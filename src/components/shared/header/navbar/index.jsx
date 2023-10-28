@@ -1,10 +1,8 @@
 import { useState } from "react";
 import styles from "./assets/css/styles.module.css";
-import expandMoreIcon from "./assets/images/expand-more-icon.png";
-import expandLessIcon from "./assets/images/expand-less-icon.png";
-import menuIcon from "./assets/images/menu-icon.png";
-import closeIcon from "./assets/images/close-icon.png";
 import { Link } from "react-router-dom";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import { MdExpandMore, MdExpandLess } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -16,9 +14,8 @@ export default function Navbar() {
         onClick={() => setIsOpenMenu(!isOpenMenu)}
         className={styles.btnHamburger}
       >
-        <img src={isOpenMenu ? closeIcon : menuIcon} alt="menu icon" />
+        {isOpenMenu ? <AiOutlineClose /> : <AiOutlineMenu />}
       </button>
-
       {(isOpenMenu || window.innerWidth > 992) && (
         <ul className={styles.menuList}>
           <li className={styles.menuItem}>
@@ -43,10 +40,11 @@ export default function Navbar() {
             onClick={() => setIsOpenMegaMenu(!isOpenMegaMenu)}
           >
             <p className={styles.menuLink}>About</p>
-            <img
-              src={isOpenMegaMenu ? expandLessIcon : expandMoreIcon}
-              alt="expand icon"
-            />
+            {!isOpenMegaMenu ? (
+              <MdExpandMore className={styles.expandIcon} />
+            ) : (
+              <MdExpandLess className={styles.expandIcon} />
+            )}
 
             {isOpenMegaMenu && (
               <ul className={styles.megaMenuList}>

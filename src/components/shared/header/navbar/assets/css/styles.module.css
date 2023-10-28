@@ -12,7 +12,7 @@
   justify-content: center;
   column-gap: 2px;
 
-  color: #0C263A;
+  color: var(--title-color);
   font-weight: 500;
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
@@ -21,13 +21,13 @@
   position: relative;
 }
 
-.menuItem img {
-  margin-top: 2px;
+.menuItem .expandIcon {
+  font-size: 1.25rem;
+  color: var(--title-color);
 }
 
 .menuLink {
   cursor: pointer;
-
 }
 
 .megaMenuList {
@@ -50,12 +50,12 @@
 
 .btnHamburger {
   display: none;
+  cursor: pointer;
+  font-size: 1.75rem;
+  margin-top: 4px;
+  color: var(--title-color);
 }
 
-.btnHamburger img {
-  cursor: pointer;
-  width: 32px;
-}
 
 @media all and (max-width:992px) {
   .btnHamburger {

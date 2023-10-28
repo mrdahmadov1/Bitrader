@@ -1,9 +1,10 @@
 .header {
+  /* background-color: #fff; */
   /* box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3); */
-  background-color: transparent;
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 11;
 }
 
 .container {
@@ -14,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 26px 0;
+  padding: 26px 1.5rem;
   position: relative;
 }
 
@@ -40,7 +41,8 @@
 @media all and (max-width:992px) {
   .container {
     max-width: 720px;
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .linkJoinContainer {
@@ -56,6 +58,7 @@
 @media all and (max-width:768px) {
   .container {
     max-width: 540px;
+    padding: 0 1rem;
   }
 
   .linkJoinContainer {
@@ -66,6 +69,9 @@
 @media all and (max-width:576px) {
   .container {
     min-width: 100%;
-    padding: 15px 12px;
+  }
+
+  .logo {
+    width: 130px;
   }
 }

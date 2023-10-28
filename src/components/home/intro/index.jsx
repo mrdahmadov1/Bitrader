@@ -1,21 +1,46 @@
 import { Link } from "react-router-dom";
 import styles from "./assets/css/styles.module.css";
+import bg from "./assets/images/bg.png";
+import bgDark from "./assets/images/bg-dark.png";
 import thumb from "./assets/images/thumb.png";
+import cube from "./assets/images/cube.png";
 import coin from "./assets/images/coin.png";
-import arrowForward from "./assets/images/arrow-forward.svg";
-import playCircle from "./assets/images/play-circle.svg";
-import fbIcon from "./assets/images/fb.svg";
-import linkedinIcon from "./assets/images/linkedin.svg";
-import instagramIcon from "./assets/images/instagram.svg";
-import youtubeIcon from "./assets/images/youtube.svg";
-import twitterIcon from "./assets/images/twitter.svg";
-
+import { useDispatch, useSelector } from "react-redux";
+import { toggleTheme } from "../../../store/theme/themeSlice";
+import { AiOutlinePlayCircle, AiOutlineArrowRight } from "react-icons/ai";
+import {
+  BiLogoFacebook,
+  BiLogoLinkedin,
+  BiLogoInstagram,
+  BiLogoYoutube,
+  BiLogoTwitter,
+} from "react-icons/bi";
+import { FaSun, FaMoon } from "react-icons/fa6";
 function Intro() {
+  const dispatch = useDispatch();
+  const currentTheme = useSelector((state) => state.theme.currentTheme);
+
   return (
     <section className={styles.wrapper}>
+      <img
+        className={styles.bgImg}
+        src={currentTheme === "light" ? bg : bgDark}
+        alt="bg image"
+      />
+      <button
+        onClick={() => dispatch(toggleTheme())}
+        className={styles.btnTheme}
+      >
+        {currentTheme === "light" ? <FaMoon /> : <FaSun />}
+      </button>
       <div className={styles.container}>
         <div className={styles.content}>
-          <img src={coin} alt="coin" />
+          <div className={styles.coin}>
+            <img src={coin} alt="coin" />
+          </div>
+          <div className={styles.cube}>
+            <img src={cube} alt="cube" />
+          </div>
 
           <h1 className={styles.title}>
             Invest Your Money With <span>Higher Return</span>
@@ -28,11 +53,11 @@ function Intro() {
           <div className={styles.linkGroup}>
             <Link className={styles.linkStart}>
               <p>Get Started</p>
-              <img src={arrowForward} alt="arrow forward" />
+              <AiOutlineArrowRight className={styles.icon} />
             </Link>
             <Link className={styles.linkWatch}>
               <p>Watch Video</p>
-              <img src={playCircle} alt="play circle" />
+              <AiOutlinePlayCircle className={styles.icon} />
             </Link>
           </div>
 
@@ -43,19 +68,19 @@ function Intro() {
                 to="/register"
                 className={`${styles.socialLink} ${styles.active}`}
               >
-                <img src={fbIcon} alt="fb icon" />
+                <BiLogoFacebook />
               </Link>
               <Link to="/register" className={styles.socialLink}>
-                <img src={linkedinIcon} alt="fb icon" />
+                <BiLogoLinkedin />
               </Link>
               <Link to="/register" className={styles.socialLink}>
-                <img src={instagramIcon} alt="fb icon" />
+                <BiLogoInstagram />
               </Link>
               <Link to="/register" className={styles.socialLink}>
-                <img src={youtubeIcon} alt="fb icon" />
+                <BiLogoYoutube />
               </Link>
               <Link to="/register" className={styles.socialLink}>
-                <img src={twitterIcon} alt="fb icon" />
+                <BiLogoTwitter />
               </Link>
             </div>
           </div>
