@@ -4,35 +4,48 @@
   align-items: center;
   justify-content: center;
   column-gap: 10px;
+  color: var(--title-color);
 }
 
 .menuItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 2px;
+  column-gap: 1px;
 
-  color: var(--title-color);
   font-weight: 500;
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
   padding: 15px 22px;
 
   position: relative;
+  cursor: pointer;
 }
 
 .menuItem .expandIcon {
   font-size: 1.25rem;
-  color: var(--title-color);
 }
 
 .menuLink {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menuItem:hover .megaMenuList,
+.megaMenuList:hover {
+  display: block;
+}
+
+.menuItem:hover .expandIcon {
+  rotate: 180deg;
 }
 
 .megaMenuList {
+  display: none;
   width: 220px;
-  background-color: #fff;
+  background-color: var(--wh-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
   border-radius: 0.4rem;
   position: absolute;
@@ -41,10 +54,10 @@
 }
 
 .megaMenuList .megaMenuItem .megaMenuLink {
-  color: #0C263A;
+  color: var(--title-color);
   display: block;
   padding: 10px 20px;
-  border-bottom: 1px solid rgba(#fff, 0.05);
+  border-bottom: 1px solid rgba(var(--wh-color), 0.05);
   border-radius: 0.3rem;
 }
 
@@ -69,15 +82,20 @@
     flex-direction: column;
     align-items: stretch;
     position: absolute;
-    top: 90px;
+    top: 60px;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: var(--wh-color);
     box-shadow: 0 5px 10px -3px rgba(0, 0, 0, 0.1);
   }
 
   .menuItem {
+    padding: 8px 12px;
     border-bottom: 1px solid rgb(189, 189, 189, 0.2);
+  }
+
+  .menuItem:hover p.menuLink {
+    margin-bottom: 190px;
   }
 
   .menuLink {
@@ -91,6 +109,7 @@
     border-top: 1px solid rgb(189, 189, 189, 0.2);
     margin-top: 15px;
     box-shadow: none;
+    border-radius: 0;
   }
 
   .menuItem.megaMenu {

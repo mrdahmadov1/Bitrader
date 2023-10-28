@@ -2,11 +2,10 @@ import { useState } from "react";
 import styles from "./assets/css/styles.module.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { MdExpandMore, MdExpandLess } from "react-icons/md";
+import { MdExpandMore } from "react-icons/md";
 
 export default function Navbar() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isOpenMegaMenu, setIsOpenMegaMenu] = useState(false);
 
   return (
     <>
@@ -33,38 +32,29 @@ export default function Navbar() {
               Blogs
             </Link>
           </li>
-          <li
-            className={`${styles.menuItem} ${
-              isOpenMegaMenu ? styles.megaMenu : ""
-            }`}
-            onClick={() => setIsOpenMegaMenu(!isOpenMegaMenu)}
-          >
-            <p className={styles.menuLink}>About</p>
-            {!isOpenMegaMenu ? (
+          <li className={styles.menuItem}>
+            <p className={styles.menuLink}>
+              About
               <MdExpandMore className={styles.expandIcon} />
-            ) : (
-              <MdExpandLess className={styles.expandIcon} />
-            )}
+            </p>
 
-            {isOpenMegaMenu && (
-              <ul className={styles.megaMenuList}>
-                <li className={styles.megaMenuItem}>
-                  <Link className={styles.megaMenuLink} to="/about">
-                    About Us
-                  </Link>
-                </li>
-                <li className={styles.megaMenuItem}>
-                  <Link className={styles.megaMenuLink} to="/about/price">
-                    Price
-                  </Link>
-                </li>
-                <li className={styles.megaMenuItem}>
-                  <Link className={styles.megaMenuLink} to="/about/team">
-                    Team
-                  </Link>
-                </li>
-              </ul>
-            )}
+            <ul className={styles.megaMenuList}>
+              <li className={styles.megaMenuItem}>
+                <Link className={styles.megaMenuLink} to="/about">
+                  About Us
+                </Link>
+              </li>
+              <li className={styles.megaMenuItem}>
+                <Link className={styles.megaMenuLink} to="/about/price">
+                  Price
+                </Link>
+              </li>
+              <li className={styles.megaMenuItem}>
+                <Link className={styles.megaMenuLink} to="/about/team">
+                  Team
+                </Link>
+              </li>
+            </ul>
           </li>
           <li className={styles.menuItem}>
             <Link className={styles.menuLink} to="/contact">
