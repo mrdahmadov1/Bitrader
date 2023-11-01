@@ -1,11 +1,10 @@
 import Intro from "../../components/home/intro";
-import Header from "../../components/shared/header";
+import Layout from "../../components/shared/layout";
 
 export default function Home() {
   return (
-    <div>
-      <Header />
+    <Layout>
       <Intro />
-    </div>
+    </Layout>
   );
 }

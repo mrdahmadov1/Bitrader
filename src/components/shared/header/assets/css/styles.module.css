@@ -1,6 +1,4 @@
 .header {
-  /* background-color: #fff; */
-  /* box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3); */
   position: fixed;
   left: 0;
   right: 0;
@@ -8,15 +6,15 @@
 }
 
 .container {
-  max-width: 1170px;
-  margin: auto;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  padding: 26px 1.5rem;
-  position: relative;
+.header.afterScroll {
+  background-color: #fff;
+  box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in;
 }
 
 .logo {}
@@ -39,12 +37,6 @@
 }
 
 @media all and (max-width:992px) {
-  .container {
-    max-width: 720px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
   .linkJoinContainer {
     flex-grow: 1;
     text-align: right;
@@ -56,21 +48,12 @@
 }
 
 @media all and (max-width:768px) {
-  .container {
-    max-width: 540px;
-    padding: 0 1rem;
-  }
-
   .linkJoinContainer {
     display: none;
   }
 }
 
 @media all and (max-width:576px) {
-  .container {
-    min-width: 100%;
-  }
-
   .logo {
     width: 130px;
   }

@@ -1,8 +1,6 @@
-.wrapper {
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--body-color);
-  padding-top: 110px;
+.container {
+  display: flex;
+  align-items: flex-start;
 }
 
 .bgImg {
@@ -30,17 +28,6 @@
   background-color: var(--brand-color);
   border: 1px solid var(--brand-color);
   box-shadow: 0px 0 15px 2px rgba(104, 225, 166, 0.6);
-}
-
-.container {
-  max-width: 1170px;
-  margin: auto;
-  padding: 0 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
-  font-family: 'Open Sans', sans-serif;
-  position: relative;
 }
 
 .content {
@@ -229,10 +216,6 @@
 @media all and (max-width:1200px) {
 
 
-  .container {
-    max-width: 960px;
-  }
-
   .coin img {
     width: 90px;
   }
@@ -249,9 +232,6 @@
 }
 
 @media all and (max-width:992px) {
-  .wrapper {
-    padding-top: 80px;
-  }
 
   .bgImg {
     display: none;
@@ -262,10 +242,6 @@
     right: auto;
     bottom: 7%;
     left: 5%;
-  }
-
-  .container {
-    max-width: 720px;
   }
 
   .content {
@@ -312,12 +288,6 @@
 }
 
 @media all and (max-width:768px) {
-  .container {
-    max-width: 540px;
-    flex-direction: column;
-    padding: 0 2rem;
-  }
-
   .thumb {
     top: 100%;
   }
@@ -333,18 +303,11 @@
 }
 
 @media all and (max-width:576px) {
-  .wrapper {
-    padding-top: 40px;
-  }
 
   .btnTheme {
     width: 35px;
     height: 35px;
     font-size: 0.95rem;
-  }
-
-  .container {
-    padding: 0 1rem;
   }
 
   .description {

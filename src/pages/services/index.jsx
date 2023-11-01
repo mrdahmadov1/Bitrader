@@ -1,7 +1,9 @@
+import Layout from "../../components/shared/layout";
+
 export default function Services() {
   return (
-    <div>
+    <Layout>
       <h1>Services Page</h1>
-    </div>
+    </Layout>
   );
 }
