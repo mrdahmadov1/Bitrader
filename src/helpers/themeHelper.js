@@ -7,6 +7,8 @@ export const updateThemeVariables = (theme) => {
     root.style.setProperty("--secondary-color", "#00D094");
     root.style.setProperty("--social-border-color-2", "rgb(255,255,255,0.08)");
     root.style.setProperty("--wh-color", "#1B2D29");
+    root.style.setProperty("--tertiary-color", "#002A1E");
+    root.style.setProperty("--partner-color", "#003E2C");
   } else {
     root.style.setProperty("--body-color", "#FFFFFF");
     root.style.setProperty("--text-color", "#6B777F");
@@ -14,5 +16,7 @@ export const updateThemeVariables = (theme) => {
     root.style.setProperty("--secondary-color", "#0A4FD5");
     root.style.setProperty("--social-border-color-2", "#ECEFF2");
     root.style.setProperty("--wh-color", "#ffffff");
+    root.style.setProperty("--tertiary-color", "#E0FAF2");
+    root.style.setProperty("--partner-color", "#EDF2F8");
   }
 };

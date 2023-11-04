@@ -9,10 +9,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 26px 0;
 }
 
 .header.afterScroll {
-  background-color: #fff;
+  background-color: var(--wh-color);
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease-in;
 }
@@ -22,11 +23,11 @@
 .linkJoin {
   font-family: 'Open Sans', sans-serif;
   text-transform: capitalize;
-
+  color: #0C263A;
   background-color: #00D094;
   border: 1px solid #00D094;
   border-radius: 8px;
-
+  font-weight: 500;
   padding: 1rem 1.875rem;
 }
 
@@ -37,6 +38,10 @@
 }
 
 @media all and (max-width:992px) {
+  .container {
+    padding: 15px 0;
+  }
+
   .linkJoinContainer {
     flex-grow: 1;
     text-align: right;

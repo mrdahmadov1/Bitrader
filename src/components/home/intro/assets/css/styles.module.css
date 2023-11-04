@@ -1,6 +1,9 @@
 .container {
+  width: 100%;
   display: flex;
   align-items: flex-start;
+  padding-top: 5rem;
+  position: relative;
 }
 
 .bgImg {
@@ -17,7 +20,7 @@
 .btnTheme {
   font-size: 1.25rem;
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   top: 90px;
   right: 90px;
   width: 40px;
@@ -33,6 +36,7 @@
 .content {
   flex-basis: 48%;
   position: relative;
+  margin-bottom: 260px;
 }
 
 .coin {
@@ -288,6 +292,10 @@
 }
 
 @media all and (max-width:768px) {
+  .content {
+    flex-basis: 100%;
+  }
+
   .thumb {
     top: 100%;
   }

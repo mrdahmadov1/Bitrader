@@ -1,0 +1,35 @@
+.wrapper {
+  width: 100vw;
+  height: fit-content;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: var(--tertiary-color);
+  padding: 22px;
+  border-top: 8px solid var(--body-color);
+  border-bottom: 8px solid var(--body-color);
+}
+
+.wrapper::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: -10px;
+  height: 119px;
+  width: 99.5%;
+  background: var(--partner-color);
+  transform: rotate(2deg);
+  z-index: -2;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  flex: 0 0 auto;
+  width: fit-content;
+  height: fit-content;
+}

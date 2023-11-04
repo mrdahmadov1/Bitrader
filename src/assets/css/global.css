@@ -6,16 +6,41 @@
   --brand-color: #00D094;
   --social-border-color-2: #ECEFF2;
   --wh-color: #ffffff;
+  --tertiary-color: #E0FAF2;
+  --partner-color: #EDF2F8
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.wrapper {
+  max-width: 1170px;
+  padding: 0 1.5rem;
+  margin: auto;
 }
 
 @media all and (max-width:1600px) {}
 
 @media all and (max-width:1400px) {}
 
-@media all and (max-width:1200px) {}
+@media all and (max-width:1200px) {
+  .wrapper {
+    max-width: 960px;
+  }
+}
 
-@media all and (max-width:992px) {}
+@media all and (max-width:992px) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
 
-@media all and (max-width:768px) {}
+@media all and (max-width:768px) {
+  .wrapper {
+    max-width: 540px;
+  }
+}
 
 @media all and (max-width:576px) {}

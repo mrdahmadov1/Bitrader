@@ -30,17 +30,19 @@ export default function Header() {
     <header
       className={`${styles.header} ${afterScroll ? styles.afterScroll : ""}`}
     >
-      <div className={styles.container}>
-        <img
-          className={styles.logo}
-          src={currentTheme === "light" ? logoLight : logoDark}
-          alt="logo light"
-        />
+      <div className="wrapper">
+        <div className={styles.container}>
+          <img
+            className={styles.logo}
+            src={currentTheme === "light" ? logoLight : logoDark}
+            alt="logo light"
+          />
 
-        <Navbar />
+          <Navbar />
 
-        <div className={styles.linkJoinContainer}>
-          <Link className={styles.linkJoin}>Join Now</Link>
+          <div className={styles.linkJoinContainer}>
+            <Link className={styles.linkJoin}>Join Now</Link>
+          </div>
         </div>
       </div>
     </header>
