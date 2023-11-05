@@ -7,7 +7,8 @@
   --social-border-color-2: #ECEFF2;
   --wh-color: #ffffff;
   --tertiary-color: #E0FAF2;
-  --partner-color: #EDF2F8
+  --partner-color: #EDF2F8;
+  --floating-content-bg-color: rgb(255, 255, 255, 0.9);
 }
 
 body {

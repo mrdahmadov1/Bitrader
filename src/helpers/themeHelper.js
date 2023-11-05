@@ -9,6 +9,7 @@ export const updateThemeVariables = (theme) => {
     root.style.setProperty("--wh-color", "#1B2D29");
     root.style.setProperty("--tertiary-color", "#002A1E");
     root.style.setProperty("--partner-color", "#003E2C");
+    root.style.setProperty("--floating-content-bg-color", "rgba(63,81,75,0.8)");
   } else {
     root.style.setProperty("--body-color", "#FFFFFF");
     root.style.setProperty("--text-color", "#6B777F");
@@ -18,5 +19,9 @@ export const updateThemeVariables = (theme) => {
     root.style.setProperty("--wh-color", "#ffffff");
     root.style.setProperty("--tertiary-color", "#E0FAF2");
     root.style.setProperty("--partner-color", "#EDF2F8");
+    root.style.setProperty(
+      "--floating-content-bg-color",
+      "rgba(255,255,255,0.9)"
+    );
   }
 };

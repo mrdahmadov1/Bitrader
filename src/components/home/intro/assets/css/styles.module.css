@@ -37,6 +37,7 @@
   flex-basis: 48%;
   position: relative;
   margin-bottom: 260px;
+  animation: fade-right 2s ease;
 }
 
 .coin {
@@ -338,5 +339,18 @@
   .cube {
     bottom: 0%;
     right: 5%;
+  }
+}
+
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
