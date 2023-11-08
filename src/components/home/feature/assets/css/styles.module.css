@@ -2,6 +2,33 @@
   height: fit-content;
   background: linear-gradient(152deg, var(--bg-trans-color) 0%, var(--bg-color) 100%);
   padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.shape {
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+  content: '';
+  top: -12%;
+  right: -5%;
+  border: 2px solid var(--bg-grad-color);
+  transform: rotate(-10deg);
+  background-color:
+    linear-gradient(219deg, var(--bg-grad-color-trans) 0%, var(--bg-grad-color) 100%);
+  padding: 40px;
+  border-bottom-left-radius: 25%;
+}
+
+.shape span {
+  position: absolute;
+  width: 980px;
+  height: 97%;
+  background: linear-gradient(219deg, var(--bg-grad-color-trans) 0%, var(--bg-grad-color) 100%);
+  border-bottom-left-radius: 25%;
+  top: 0%;
+  right: -1%;
 }
 
 .container {
@@ -11,6 +38,7 @@
 }
 
 .content {
+  z-index: 1;
   flex-basis: 40%;
 }
 
@@ -59,21 +87,78 @@
   cursor: pointer;
 }
 
-.thumb {}
+.thumb {
+  z-index: 1;
+  position: relative;
+}
 
-.thumbImg {}
+.thumbImg {
+  border-radius: 20px;
+}
 
-.shapeImg {}
+.arrowImg {
+  width: 70px;
+  position: absolute;
+  top: -4%;
+  left: -5%;
+  animation: left-right 3s cubic-bezier(0.41, 0.15, 0.64, 0.86) infinite alternate;
+}
 
 .thumbContentTop,
-.thumbContentBottom {}
+.thumbContentBottom {
+  position: absolute;
 
-.thumbContentTop {}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  border: 2px solid var(--border-color-2);
+  border-radius: 8px 40px 32px 80px;
+  background-color: var(--floating-content-bg-color-2);
+  backdrop-filter: blur(24px);
+}
 
-.thumbContentTop img {}
+.thumbContentTop {
+  right: -70px;
+  top: -55px;
+  padding: 16px 10px 16px 48px;
+}
 
-.thumbContentBottom {}
+.thumbContentTop img {
+  width: 80px;
+}
 
-.thumbTitle {}
+.thumbContentBottom {
+  left: 20px;
+  bottom: 0;
+  padding: 25px 30px;
+  border-radius: 32px 60px 8px 40px;
+  box-shadow: -40px 40px 60px 0px rgba(5, 30, 54, 0.05);
+}
 
-.thumbDescription {}
+.thumbTitle {
+  color: #00D094;
+  line-height: 32px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.thumbDescription {
+  font-size: 1.125rem;
+  font-weight: 700;
+  max-inline-size: 18ch;
+  color: var(--title-color);
+  text-transform: capitalize;
+}
+
+
+@keyframes left-right {
+  0% {
+    transform: translateX(30px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}

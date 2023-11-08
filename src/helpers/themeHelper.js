@@ -10,13 +10,19 @@ export const updateThemeVariables = (theme) => {
     root.style.setProperty("--tertiary-color", "#002A1E");
     root.style.setProperty("--partner-color", "#003E2C");
     root.style.setProperty("--floating-content-bg-color", "rgba(63,81,75,0.8)");
+    root.style.setProperty(
+      "--floating-content-bg-color-2",
+      "rgba(255,255,255,0.08)"
+    );
     root.style.setProperty("--bg-trans-color", "rgba(237,242,248,0.02)");
     root.style.setProperty("--bg-color", "rgba(237,242,248,0.08)");
     root.style.setProperty("--border-color", "rgba(230,237,251,0.12)");
+    root.style.setProperty("--border-color-2", "rgba(255,255,255,0.08)");
     root.style.setProperty(
       "--box-shadow",
       "0px 12px 30px rgba(14, 4, 0, 0.24)"
     );
+    root.style.setProperty("--bg-grad-color", "#253A33");
   } else {
     root.style.setProperty("--body-color", "#FFFFFF");
     root.style.setProperty("--text-color", "#6B777F");
@@ -30,12 +36,18 @@ export const updateThemeVariables = (theme) => {
       "--floating-content-bg-color",
       "rgba(255,255,255,0.9)"
     );
+    root.style.setProperty(
+      "--floating-content-bg-color-2",
+      "rgba(255,255,255,0.5)"
+    );
     root.style.setProperty("--bg-trans-color", "rgba(237,242,248,0.22)");
     root.style.setProperty("--bg-color", "#EDF2F8");
     root.style.setProperty("--border-color", "#E6EDFB");
+    root.style.setProperty("--border-color-2", "#E6EDFB");
     root.style.setProperty(
       "--box-shadow",
       "0px 12px 30px rgba(33, 85, 186, 0.08)"
     );
+    root.style.setProperty("--bg-grad-color", "#FFF");
   }
 };

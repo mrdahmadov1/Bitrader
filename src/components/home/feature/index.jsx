@@ -1,8 +1,18 @@
+import thumb11 from "./assets/images/1-1.png";
+import thumb21 from "./assets/images/2-1.png";
+import thumb12 from "./assets/images/1-2.png";
+import thumb22 from "./assets/images/2-2.png";
+import thumb32 from "./assets/images/3-2.png";
+import thumb42 from "./assets/images/4-2.png";
+import arrow from "./assets/images/arrow.png";
 import styles from "./assets/css/styles.module.css";
 
 function Feature() {
   return (
     <div className={styles.wrapper}>
+      <div className={styles.shape}>
+        <span></span>
+      </div>
       <div className={`wrapper ${styles.container}`}>
         <div className={styles.content}>
           <h2 className={styles.title}>
@@ -36,10 +46,10 @@ function Feature() {
           </ul>
         </div>
         <div className={styles.thumb}>
-          <img className={styles.thumbImg} src="" alt="thumb image" />
-          <img className={styles.shapeImg} src="" alt="shape image" />
+          <img className={styles.arrowImg} src={arrow} alt="arrow image" />
+          <img className={styles.thumbImg} src={thumb11} alt="thumb image" />
           <div className={styles.thumbContentTop}>
-            <img src="" alt="thumb content top image" />
+            <img src={thumb12} alt="thumb content top image" />
             <p className={styles.thumbDescription}>Interest rate for loan</p>
           </div>
           <div className={styles.thumbContentBottom}>
