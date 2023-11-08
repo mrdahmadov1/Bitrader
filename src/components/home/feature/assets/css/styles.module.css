@@ -1,0 +1,79 @@
+.wrapper {
+  height: fit-content;
+  background: linear-gradient(152deg, var(--bg-trans-color) 0%, var(--bg-color) 100%);
+  padding: 120px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  flex-basis: 40%;
+}
+
+.title {
+  font-family: 'Anek Telugu';
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 600;
+  color: var(--title-color);
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.title span {
+  color: var(--secondary-color);
+}
+
+.description {
+  margin-bottom: 48px;
+}
+
+.offerList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.offerItem.active {
+  color: var(--title-color);
+  background-color: var(--wh-color);
+  border-color: var(--wh-color);
+  box-shadow: var(--box-shadow);
+}
+
+.offerItem {
+  color: var(--text-color);
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-transform: capitalize;
+}
+
+.btnOffer {
+  padding: 25px;
+  cursor: pointer;
+}
+
+.thumb {}
+
+.thumbImg {}
+
+.shapeImg {}
+
+.thumbContentTop,
+.thumbContentBottom {}
+
+.thumbContentTop {}
+
+.thumbContentTop img {}
+
+.thumbContentBottom {}
+
+.thumbTitle {}
+
+.thumbDescription {}

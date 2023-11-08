@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Layout({ children }) {
   return (
-    <div className="wrapper">
+    <div>
       <Header />
       <main>{children}</main>
     </div>

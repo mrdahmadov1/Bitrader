@@ -27,7 +27,7 @@ function Intro() {
         src={currentTheme === "light" ? bg : bgDark}
         alt="bg image"
       />
-      <section className={styles.container}>
+      <section className={`wrapper ${styles.container}`}>
         <button
           onClick={() => dispatch(toggleTheme())}
           className={styles.btnTheme}
