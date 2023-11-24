@@ -1,3 +1,10 @@
-# Bitrader
+# React + JavaScript + Firebase
+[Open in Browser](https://bitrader-d990c.web.app/)
 
-![Bitrader Design Overview](src/assets/images/design-overview.png)
+<h3>Installation</h3>
+<ul>
+  <li>clone repo</li>
+  <li>npm install</li>
+  <li>npm run dev</li>
+</ul>
+
